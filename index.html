@@ -8,11 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Add Babel Standalone for in-browser JSX/TSX transpilation -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <style>
-    body {
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    }
-  </style>
+  <!-- Removed inline style block -->
 <script type="importmap">
 {
   "imports": {
@@ -23,9 +19,8 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
-<body class="bg-sky-50">
+<body class="bg-sky-50 font-sans"> <!-- Added font-sans to ensure Tailwind's base sans-serif font stack is applied -->
   <div id="root"></div>
   <!--
     IMPORTANT:
@@ -34,6 +29,5 @@
     3. Added data-type="module" so Babel treats it as an ES module.
   -->
   <script type="text/babel" data-presets="react,typescript" data-type="module" src="./index.tsx"></script>
-<script type="module" src="./index.tsx"></script>
 </body>
 </html>
